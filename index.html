@@ -101,7 +101,7 @@
     <h1>SpideyStudy</h1>
     <p class="sub">This domain and everything on it is owned and copyrighted by <strong>Aarav Malik</strong>. If you are interested in this domain or want to get in touch, message him directly on Telegram.</p>
     <p class="hindi">Ye domain Aarav Malik ka copyright hai. Agar aapko ye chahiye ya koi baat karni hai, to Telegram pe DM karein.</p>
-    <a class="btn" href="https://t.me/aaravmalik128" target="_blank" rel="noopener">DM on Telegram &nbsp;<span class="handle">@aaravmalik128</span></a>
+    <a class="btn" href="https://t.me/aaravmalik128" onclick="openTG(event)">DM on Telegram &nbsp;<span class="handle">@aaravmalik128</span></a>
     <br>
     <a class="btn btn-alt" href="tg://resolve?domain=aaravmalik128">Open in Telegram app</a>
     <span class="hint">Upar wala link na khule to ye wala dabao, seedha Telegram app khulega.</span>
@@ -110,5 +110,17 @@
       spideystudy.cc.cd
     </footer>
   </div>
+<script>
+function openTG(e) {
+  e.preventDefault();
+  var start = Date.now();
+  window.location.href = 'tg://resolve?domain=aaravmalik128';
+  setTimeout(function () {
+    if (!document.hidden && Date.now() - start < 3000) {
+      window.location.href = 'https://t.me/aaravmalik128';
+    }
+  }, 1500);
+}
+</script>
 </body>
 </html>
